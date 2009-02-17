@@ -13,18 +13,18 @@ $title=($cfg && is_object($cfg))?$cfg->getTitle():'osTicket :: Support Ticket Sy
 <body>
 <div id="container">
     <div id="header">
-        <a id="logo" href="index.php" title="Support Center"><img src="./images/logo2.jpg" border=0 alt="Support Center"></a>
-        <p><span>SUPPORT TICKET</span> SYSTEM</p>
+    <a id="logo" href="index.php" title="<?=$lang['global']['logo_alt']?>"><img src="./images/logo2.jpg" border=0 alt="<?=$lang['global']['logo_alt']?>"></a>
+        <p><?=$lang['global']['title']?></p>
     </div>
     <ul id="nav">
          <?                    
          if(is_object($thisclient) && $thisclient->isValid()) {?>
-         <li><a class="log_out" href="logout.php">Log Out</a></li>
-         <li><a class="my_tickets" href="view.php">My Tickets</a></li>
+           <li><a class="log_out" href="logout.php"><?=$lang['global']['logout'] ?></a></li>
+           <li><a class="my_tickets" href="view.php"><?=$lang['global']['my_tickets'] ?></a></li>
          <?}else {?>
-         <li><a class="ticket_status" href="view.php">Ticket Status</a></li>
+         <li><a class="ticket_status" href="view.php"><?=$lang['global']['ticket_status'] ?></a></li>
          <?}?>
-         <li><a class="new_ticket" href="open.php">New Ticket</a></li>
-         <li><a class="home" href="index.php">Home</a></li>
+         <li><a class="new_ticket" href="new.php"><?=$lang['global']['new_ticket'] ?></a></li>
+         <li><a class="home" href="index.php"><?=$lang['global']['home'] ?></a></li>
     </ul>
     <div id="content">
