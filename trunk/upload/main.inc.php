@@ -61,6 +61,7 @@
    define('ROOT_DIR',str_replace('\\\\', '/', realpath(dirname(__FILE__))).'/'); #Get real path for root dir ---linux and windows
    define('INCLUDE_DIR',ROOT_DIR.'include/'); //Change this if include is moved outside the web path.
    define('PEAR_DIR',INCLUDE_DIR.'pear/');
+   define('LANG_DIR',ROOT_DIR.'lang/');
    
    
     /*--------Do NOT monkey with anything else beyond this point ----------*/
@@ -87,6 +88,7 @@
     require(INCLUDE_DIR.'class.http.php');
     require(INCLUDE_DIR.'class.format.php'); //format helpers
     require(INCLUDE_DIR.'class.validator.php'); //Class to help with basic form input validation...please help improve it.
+    require(LANG_DIR.LANG.'/common.php');
    
     #pagenation default
     define('PAGE_LIMIT',20);

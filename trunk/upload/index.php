@@ -18,30 +18,30 @@ require('client.inc.php');
 require(CLIENTINC_DIR.'header.inc.php');
 ?>
  <div>
-    <p>Welcome to the support center.</p>
-    <p>In order to streamline support requests and better serve you, we utilize a support ticket system. Every support request is assigned a unique ticket number which you can use to track the progress and responses online. For your reference we provide complete archives and history of all your support requests.</p>
+    <p><?=$lang['index']['welcome_title']?></p>
+    <p><?=$lang['index']['welcome_text']?></p>
     <br>
     <div id="index">
         <div class="box">
           <img src="./images/new_ticket_title.jpg" width="186" height="50" align="left">
-          <p>Submit a new support request. Please provide as much detail as possible so we can best assist you. To update a previously submitted ticket, please use the form to the right. A valid email address is required.</p>
-            <p><a class="btn" href="open.php">Open New Ticket</a>
+            <p><?=$lang['index']['new_ticket_text']?></p>
+            <p><a class="btn" href="new.php"><?=$lang['index']['new_ticket_button']?></a>
         </div>
         <img id="bar" src="./images/verticalbar.jpg" width="21" height="266" alt="|">
         <div class="box">
           <img src="./images/ticket_status_title.jpg" width="186" height="50" align="right">
-          <p>Check status of previously opened ticket. we provide archives and history of all your support requests complete with responses.</p>
+            <p><?=$lang['index']['open_ticket_text']?></p>
           <form action="view.php" method="post">
             <fieldset>
-              <label>Email:</label>
+            <label><?=$lang['index']['open_ticket_form_email']?></label>
               <input type="text" name="lemail">
             </fieldset>
             <fieldset>
-              <label>Ticket#:</label>
+            <label><?=$lang['index']['open_ticket_form_ticket']?></label>
               <input type="text" name="lticket">
             </fieldset>
             <br>
-          <input type="submit" class="btn" value="Check Status">
+            <input type="submit" class="btn" value="<?=$lang['index']['open_ticket_form_submit']?>">
         </form>
         </div>
     </div>

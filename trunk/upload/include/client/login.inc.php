@@ -14,7 +14,7 @@ $t=Format::htmlchars($_POST['lticket']?$_POST['lticket']:$_GET['t']);
 <div style="margin:5px 0px 100px 0;text-align:center; width:100%;">
     <p align="center">
         To view the status of a ticket, provide us with your login details below.<br/>
-        If this is your first time contacting us or you've lost the ticket ID, please <a href="open.php">click here</a> to open a new ticket.
+        If this is your first time contacting us or you've lost the ticket ID, please <a href="new.php">click here</a> to open a new ticket.
     </p>
     <span class="error"><?=$loginmsg?></span>
     <form action="login.php" method="post">

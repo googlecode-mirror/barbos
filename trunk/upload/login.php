@@ -32,7 +32,7 @@ if($_POST && (!empty($_POST['lemail']) && !empty($_POST['lticket']))):
     //Check time for last max failed login attempt strike.
     //Must wait for 5 minutes after each strike.
     if($_SESSION['_client']['laststrike'] && (time()-$_SESSION['_client']['laststrike']<5*60))
-        $errors['err']='You\'ve reached maximum failed login attempts allowed. Try again after 5 minutes or <a href="open.php">open a new ticket</a>';
+        $errors['err']='You\'ve reached maximum failed login attempts allowed. Try again after 5 minutes or <a href="new.php">open a new ticket</a>';
     //See if we can fetch local ticket id associated with the ID given
     if(!$errors && is_numeric($ticketID) && Validator::is_email($email) && ($tid=Ticket::getIdByExtId($ticketID))) {
         //At this point we know the ticket is valid.
@@ -63,7 +63,7 @@ if($_POST && (!empty($_POST['lemail']) && !empty($_POST['lticket']))):
     $loginmsg='Invalid login';
     $_SESSION['_client']['strikes']+=1;
     if(!$errors && $_SESSION['_client']['strikes']>3) {
-        $errors['err']='Forgot your login info? Please <a href="open.php">open a new ticket</a>.';
+        $errors['err']='Forgot your login info? Please <a href="new.php">open a new ticket</a>.';
         $_SESSION['_client']['laststrike']=time();
         if($cfg->alertONLoginError()) {
             $alert='Excessive login attempts by a client'."\n".

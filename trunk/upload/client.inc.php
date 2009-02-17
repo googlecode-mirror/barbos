@@ -27,7 +27,7 @@ define('CLIENTINC_DIR',INCLUDE_DIR.'client/');
 define('OSTCLIENTINC',TRUE);
 
 //Check if config info got loaded.
-if (!is_object($cfg) || !$cfg->getId())  die('Support ticket system is offline');
+if (!is_object($cfg) || !$cfg->getId())  die($lang['message']['offline']);
 
 //Check the status of the HelpDesk.
 if($cfg->isHelpDeskOffline()) {
@@ -43,7 +43,7 @@ require_once(INCLUDE_DIR.'class.dept.php');
 $errors=array();
 $msg='';
 //Pages which do not require login.
-$nologinpages=array('open.php','index.php'); 
+$nologinpages=array('new.php','index.php'); 
 $thisclient=null;
 //Make sure the user is valid..before doing anything else.
 if($_SESSION['_client']['userID'] && $_SESSION['_client']['key'])
