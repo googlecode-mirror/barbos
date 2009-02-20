@@ -1,7 +1,7 @@
 Thank you for trying osTicket V1.6
 
 Directories
- upload  =>Files to upload to the webserver...e.g support, helpdesk or osticket i.e http://yourdomain.com/support
+ upload  =>Files to upload to the webserve r...e.g support, helpdesk or osticket i.e http://yourdomain.com/support
  scripts =>Helper scripts for remote piping ( More to come)
 
 For upto date documentation please refer to osTicket wiki.
