@@ -6,7 +6,7 @@
 
     Agnislav Onufrijchuk <agnislav@imaster.org.ua>
     Copyright (c)  2008, 2009
-    http://osticket.org.ua
+    http://osticket.org.ua 
 
     Released under the GNU General Public License WITHOUT ANY WARRANTY.
     See LICENSE.TXT for details.
