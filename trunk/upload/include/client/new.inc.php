@@ -13,7 +13,7 @@ $info=($_POST && $errors)?Format::htmlchars($_POST):array(); //on error...use th
     <?}?>
 </div>
 <div>Please fill in the form below to open a new ticket.</div><br>
-<form action="open.php" method="POST" enctype="multipart/form-data">
+<form action="new.php" method="POST" enctype="multipart/form-data">
 <table align="left" cellpadding=2 cellspacing=1 width="90%">
     <tr>
         <th width="20%">Full Name:</th>
